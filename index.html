@@ -4,7 +4,7 @@
     <meta charset="utf-9" />
     <meta
       name="description"
-      content="You can mutliply numbers using a historical method using this website"
+      content="This website will count up for you"
     />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Mohamad" />
@@ -23,7 +23,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="./css/getmdl-select.min.css" />
-    <title>Simple calculator</title>
+    <title>Counter</title>
   </head>
   <body>
     <script defer src="./js/getmdl-select.min.js"></script>
@@ -34,7 +34,7 @@
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">Simple calculator</span>
+          <span class="mdl-layout-title">Counter</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
@@ -59,7 +59,7 @@
           <!--Text below header-->
           <br />
           <div class="page-content-top">
-            <h4>Please enter whole numbers you would like to divide</h4>
+            <h4>Enter a number to count up to</h4>
           </div>
           <br />
           <!-- text fields -->
@@ -72,37 +72,18 @@
                 class="mdl-textfield__input"
                 type="text"
                 pattern="-?[0-9]*(\.[0-9]+)?"
-                id="numberA"
+                id="number-goal"
               />
-              <label class="mdl-textfield__label" for="numberA"
-                >First number...</label
+              <label class="mdl-textfield__label" for="number-goal"
+                >Number...</label
               >
               <span class="mdl-textfield__error">Input is not a number!</span>
             </div>
           </form>
-          <!-- Numeric Textfield with Floating Label -->
-          <form action="#">
-            <div
-              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-            >
-              <input
-                class="mdl-textfield__input"
-                type="text"
-                pattern="-?[0-9]*(\.[0-9]+)?"
-                id="numberB"
-              />
-              <label class="mdl-textfield__label" for="numberB"
-                >Second number...</label
-              >
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-          </form>
-          <br />
-          <br />
           <!-- Accent-colored raised button with ripple -->
           <button
             class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            onclick="calculate()"
+            onclick="count()"
           >
             Calculate
           </button>
